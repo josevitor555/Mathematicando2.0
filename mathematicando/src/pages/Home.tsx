@@ -1,9 +1,12 @@
 // Shadcn UI
 import { Button } from "@/components/ui/button";
 
+// Importando o novo componente
+import { ArticleAuthor } from "@/components/ArticleAuthor";
+
 // Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faCircle, faHexagon, faAward, faTrophy, faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faHexagon, faAward, faTrophy, faFilter, faUser } from "@fortawesome/free-solid-svg-icons";
 
 // Data Content
 import { modulos } from "@/data/contentMock";
@@ -115,7 +118,7 @@ const Home = () => {
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.5, delay: 0.1 * artigoIndex }}
                                         >
-                                            <div className="grid grid-cols-[300px_auto_auto] bg-gray-200/10 mb-6 rounded-2xl px-6 py-4 items-center">
+                                            <div className="grid grid-cols-[300px_auto_auto] bg-gray-200/10 mb-6 rounded-2xl px-6 py-4 items-center transition-all duration-300 hover:bg-gray-200/20 hover:shadow-lg">
                                                 <div className="flex flex-col items-start">
                                                     <h3 className="text-xl font-bold text-white mb-0">
                                                         {artigo.titulo}
@@ -124,12 +127,23 @@ const Home = () => {
                                                 </div>
 
                                                 <div className="flex items-center justify-center">
-                                                    <h3 className="bg-gray-200/20 text-small font-bold text-white mb-0 px-4 py-2">{artigo.progresso}</h3>
+                                                    <h3 className="bg-gray-200/20 text-small font-bold rounded-lg text-white mb-0 px-4 py-2">{artigo.progresso}</h3>
                                                 </div>
 
                                                 <div className="flex items-center justify-end">
                                                     <Button className="cursor-pointer"> Acessar Atividade </Button>
                                                 </div>
+
+                                                {/* Divider */}
+                                                <div className="col-span-3 mt-4">
+                                                    <div className="w-full h-px bg-gray-200/20" />
+                                                </div>
+
+                                                {/* Who wrote the article */}
+                                                <div className="col-span-3 mt-4 flex justify-start">
+                                                    <ArticleAuthor autor={artigo.autor} />
+                                                </div>
+                                                
                                             </div>
                                         </motion.div>
                                     ))}
