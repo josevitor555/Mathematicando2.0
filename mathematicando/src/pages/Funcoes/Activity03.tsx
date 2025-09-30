@@ -199,77 +199,6 @@ const Activity03 = () => {
                         <BlockMath math="x = 2" />
                     </div>
 
-                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações Práticas</h2>
-
-                    <p className="mb-4 text-lg">
-                        As funções exponenciais modelam diversos fenômenos naturais e sociais:
-                    </p>
-
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-2">Crescimento Populacional</h3>
-
-                    <p className="mb-4 text-lg">
-                        Em condições ideais, o crescimento de uma população pode ser modelado por:
-                    </p>
-
-                    <div className="bg-gray-200/10 text-gray-200 p-4 rounded-lg overflow-x-auto mb-4 text-lg">
-                        <BlockMath math="P(t) = P_0 \cdot e^{rt}" />
-                        <p>Onde:</p>
-                        <ul className="list-disc list-inside ml-4 space-y-1">
-                            <li>P(t) é a população no tempo t</li>
-                            <li>P₀ é a população inicial</li>
-                            <li>r é a taxa de crescimento</li>
-                            <li>e é o número de Euler (≈ 2,718)</li>
-                        </ul>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-2">Decaimento Radioativo</h3>
-
-                    <p className="mb-4 text-lg">
-                        A quantidade de uma substância radioativa diminui exponencialmente com o tempo:
-                    </p>
-
-                    <div className="bg-gray-200/10 text-gray-200 p-4 rounded-lg overflow-x-auto mb-4 text-lg">
-                        <BlockMath math="Q(t) = Q_0 \cdot e^{-kt}" />
-                        <p>Onde:</p>
-                        <ul className="list-disc list-inside ml-4 space-y-1">
-                            <li>Q(t) é a quantidade no tempo t</li>
-                            <li>Q₀ é a quantidade inicial</li>
-                            <li>k é a constante de decaimento</li>
-                            <li>t é o tempo</li>
-                        </ul>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-2">Juros Compostos</h3>
-
-                    <p className="mb-4 text-lg">
-                        O montante em um investimento com juros compostos cresce exponencialmente:
-                    </p>
-
-                    <div className="bg-gray-200/10 text-gray-200 p-4 rounded-lg overflow-x-auto mb-4 text-lg">
-                        <BlockMath math="M(t) = C \cdot (1 + i)^t" />
-                        <p>Onde:</p>
-                        <ul className="list-disc list-inside ml-4 space-y-1">
-                            <li>M(t) é o montante no tempo t</li>
-                            <li>C é o capital inicial</li>
-                            <li>i é a taxa de juros</li>
-                            <li>t é o tempo</li>
-                        </ul>
-                    </div>
-
-                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Função Exponencial Natural</h2>
-
-                    <p className="mb-4 text-lg">
-                        A função exponencial natural utiliza como base o número de Euler (e ≈ 2,71828...):
-                    </p>
-
-                    <div className="bg-gray-200/10 text-gray-200 p-4 rounded-lg overflow-x-auto mb-4 text-lg">
-                        <BlockMath math="f(x) = e^x" />
-                    </div>
-
-                    <p className="mb-4 text-lg">
-                        Esta função tem propriedades especiais e é amplamente utilizada em cálculo diferencial e integral.
-                    </p>
-
                     <h2 className="text-3xl font-bold text-white mt-8 mb-4">Inequações Exponenciais</h2>
 
                     <p className="mb-4 text-lg">
@@ -277,9 +206,169 @@ const Activity03 = () => {
                     </p>
 
                     <ul className="list-disc list-inside mb-4 space-y-2 text-lg">
-                        <li>Se <strong className="text-white">a <InlineMath math=" > 1" /></strong>: <InlineMath math="a^m > a^n \Leftrightarrow m > n" /></li>
-                        <li>Se <strong className="text-white"><InlineMath math="0 < a < 1" /></strong>: <InlineMath math="a^m > a^n \Leftrightarrow m < n" /></li>
+                        <li>Se <strong className="text-white">a &gt; 1</strong>: <InlineMath math="a^m > a^n \Leftrightarrow m > n" /></li>
+                        <li>Se <strong className="text-white">0 &lt; a &lt; 1</strong>: <InlineMath math="a^m > a^n \Leftrightarrow m < n" /></li>
                     </ul>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exemplos Interativos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Vamos explorar alguns exemplos interativos para entender melhor como as funções exponenciais se comportam:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 1: Função Exponencial Crescente</h3>
+                        <p>Considere f(x) = 2ˣ</p>
+                        <BlockMath math="f(x) = 2^x" />
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Base a = 2 (&gt; 1), função crescente</li>
+                            <li>Domínio: ℝ</li>
+                            <li>Contradomínio: ℝ*₊</li>
+                            <li>Pontos importantes: f(0) = 1, f(1) = 2, f(2) = 4</li>
+                            <li>Assíntota horizontal: y = 0</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 2: Função Exponencial Decrescente</h3>
+                        <p>Considere g(x) = (1/2)ˣ</p>
+                        <BlockMath math="g(x) = \left(\frac{1}{2}\right)^x" />
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Base a = 1/2 (0 &lt; a &lt; 1), função decrescente</li>
+                            <li>Domínio: ℝ</li>
+                            <li>Contradomínio: ℝ*₊</li>
+                            <li>Pontos importantes: g(0) = 1, g(1) = 1/2, g(2) = 1/4</li>
+                            <li>Assíntota horizontal: y = 0</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exercícios Práticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 1</h3>
+                        <p>Resolva a equação exponencial: 3ˣ⁺² = 27</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Expressar ambos os lados com a mesma base: 27 = 3³</li>
+                                    <li>3ˣ⁺² = 3³</li>
+                                    <li>Igualar os expoentes: x + 2 = 3</li>
+                                    <li>x = 1</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 2</h3>
+                        <p>Uma população de bactérias dobra a cada hora. Se inicialmente há 1000 bactérias, quantas haverá após 5 horas?</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Modelo: P(t) = P₀ · 2ᵗ</li>
+                                    <li>P₀ = 1000 bactérias</li>
+                                    <li>t = 5 horas</li>
+                                    <li>P(5) = 1000 · 2⁵ = 1000 · 32 = 32000</li>
+                                    <li>Após 5 horas, haverá 32.000 bactérias</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações em Biologia</h2>
+
+                    <p className="mb-4 text-lg">
+                        As funções exponenciais são amplamente utilizadas em biologia para modelar diversos fenômenos:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Crescimento Bacteriano</h3>
+                        <p>Sob condições ideais, bactérias se reproduzem por fissão binária:</p>
+                        <BlockMath math="N(t) = N_0 \cdot 2^{t/T}" />
+                        <p>Onde:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>N(t) é o número de bactérias no tempo t</li>
+                            <li>N₀ é o número inicial de bactérias</li>
+                            <li>T é o tempo de geração (tempo para dobrar)</li>
+                            <li>t é o tempo decorrido</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Difusão de Medicamentos</h3>
+                        <p>A concentração de um medicamento no sangue diminui exponencialmente:</p>
+                        <BlockMath math="C(t) = C_0 \cdot e^{-kt}" />
+                        <p>Onde:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>C(t) é a concentração no tempo t</li>
+                            <li>C₀ é a concentração inicial</li>
+                            <li>k é a constante de eliminação</li>
+                            <li>t é o tempo</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Funções Exponenciais com Base "e"</h2>
+
+                    <p className="mb-4 text-lg">
+                        A função exponencial natural com base e tem propriedades especiais:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Propriedades Importantes</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>A derivada de eˣ é eˣ</li>
+                            <li>A integral de eˣ é eˣ + C</li>
+                            <li>e⁰ = 1</li>
+                            <li>e¹ = e ≈ 2,718</li>
+                            <li>eˣ &gt; 0 para todo x real</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Relação com Outras Bases</h3>
+                        <p>Qualquer função exponencial aˣ pode ser escrita em termos de e:</p>
+                        <BlockMath math="a^x = e^{x \ln a}" />
+                        <p>Isso é útil para cálculos e análises matemáticas.</p>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo Prático</h3>
+                        <p>Converter 2ˣ para base e:</p>
+                        <BlockMath math="2^x = e^{x \ln 2} = e^{0{,}693x}" />
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Transformações de Gráficos Exponenciais</h2>
+
+                    <p className="mb-4 text-lg">
+                        A partir da função básica f(x) = aˣ, podemos obter outras funções através de transformações:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Translações</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Vertical</strong>: f(x) = aˣ + k desloca k unidades para cima (k &gt; 0) ou para baixo (k &lt; 0)</li>
+                            <li><strong className="text-white">Horizontal</strong>: f(x) = aˣ⁺ʰ desloca h unidades para a esquerda (h &gt; 0) ou para a direita (h &lt; 0)</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Reflexões</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Em relação ao eixo x</strong>: f(x) = -aˣ</li>
+                            <li><strong className="text-white">Em relação ao eixo y</strong>: f(x) = a⁻ˣ</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Dilatações e Compressões</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Vertical</strong>: f(x) = c·aˣ</li>
+                            <li><strong className="text-white">Horizontal</strong>: f(x) = aᶜˣ</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo Composto</h3>
+                        <p>A função f(x) = 2·3ˣ⁻¹ + 1 representa uma função exponencial:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Deslocada 1 unidade para a direita</li>
+                            <li>Deslocada 1 unidade para cima</li>
+                            <li>Dilatada verticalmente por um fator de 2</li>
+                            <li>Com base 3 (função crescente)</li>
+                        </ul>
+                    </div>
 
                     <h2 className="text-3xl font-bold text-white mt-8 mb-4">Conclusão</h2>
 

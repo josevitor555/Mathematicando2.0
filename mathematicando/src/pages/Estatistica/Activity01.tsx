@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faGlobe, faHashtag, faLink } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { InlineMath, BlockMath } from 'react-katex';
+import { ArrowLeft, Globe, Twitter, Linkedin, Github } from 'lucide-react';
 
 // Dados do autor (exemplo)
 const authorData = {
@@ -33,7 +34,7 @@ const Activity01 = () => {
                 onClick={handleGoBack}
                 className="mb-4 flex items-center text-white hover:text-gray-300 transition-colors"
             >
-                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
+                <ArrowLeft className="mr-2 w-5 h-5" />
                 <span>Voltar</span>
             </button>
 
@@ -73,16 +74,16 @@ const Activity01 = () => {
                             {/* Links sociais */}
                             <div className="flex justify-center md:justify-start space-x-4 mb-3">
                                 <a href={authorData.socialLinks.website} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
+                                    <Globe className="w-5 h-5" />
                                 </a>
                                 <a href={`https://twitter.com/${authorData.socialLinks.twitter}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faHashtag} className="w-5 h-5" />
+                                    <Twitter className="w-5 h-5" />
                                 </a>
                                 <a href={`https://linkedin.com/in/${authorData.socialLinks.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                                 <a href={`https://github.com/${authorData.socialLinks.github}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Github className="w-5 h-5" />
                                 </a>
                             </div>
 
@@ -293,6 +294,153 @@ const Activity01 = () => {
                         <li><strong className="text-white">Amplitude</strong>: 3.0 (9.5 - 6.5)</li>
                         <li><strong className="text-white">Desvio Padrão</strong>: ≈ 0.94</li>
                     </ul>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exemplos Interativos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Vamos explorar mais exemplos para entender melhor as medidas de tendência central e dispersão:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 1: Comparando Conjuntos de Dados</h3>
+                        <p>Considere dois conjuntos de salários (em milhares de reais):</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Conjunto A: [5, 6, 7, 8, 9]</li>
+                            <li>Conjunto B: [3, 5, 7, 9, 11]</li>
+                        </ul>
+                        <p className="mt-2">Ambos têm média 7, mas:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Conjunto A: Desvio padrão ≈ 1.58</li>
+                            <li>Conjunto B: Desvio padrão ≈ 3.16</li>
+                            <li>O conjunto B tem maior dispersão dos dados</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 2: Identificando Moda</h3>
+                        <p>Notas de uma turma: [4, 5, 6, 6, 6, 7, 7, 8, 9, 10]</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Média: 6.9</li>
+                            <li>Mediana: 6.5</li>
+                            <li>Moda: 6 (aparece 3 vezes)</li>
+                            <li>Este conjunto é unimodal</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exercícios Práticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 1</h3>
+                        <p>Calcule a média, mediana e desvio padrão das idades de um grupo de pessoas: [20, 22, 25, 25, 27, 30, 35]</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Média: (20+22+25+25+27+30+35)/7 = 184/7 ≈ 26.29 anos</li>
+                                    <li>Mediana: 25 anos (valor central)</li>
+                                    <li>Desvio padrão: ≈ 4.92 anos</li>
+                                </ul>
+                            </div>
+                        </details>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 2</h3>
+                        <p>Em uma pesquisa sobre horas de sono por noite, os dados foram: [6, 7, 7, 8, 8, 8, 9, 9, 10]. Determine a moda e interprete o resultado.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Moda: 8 horas (aparece 3 vezes)</li>
+                                    <li>Interpretação: A maioria das pessoas dorme 8 horas por noite</li>
+                                    <li>O conjunto é unimodal</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações em Ciências Sociais</h2>
+
+                    <p className="mb-4 text-lg">
+                        A estatística descritiva é amplamente utilizada em ciências sociais para analisar dados de pesquisas:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Pesquisas de Opinião</h3>
+                        <p>Em pesquisas eleitorais, medidas descritivas ajudam a entender:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Percentual de intenções de voto para cada candidato</li>
+                            <li>Intervalo de confiança das estimativas</li>
+                            <li>Perfil demográfico dos entrevistados</li>
+                            <li>Comparação entre diferentes grupos</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Indicadores Sociais</h3>
+                        <p>Organismos internacionais utilizam estatísticas descritivas para:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Calcular o Índice de Desenvolvimento Humano (IDH)</li>
+                            <li>Analisar a distribuição de renda (coeficiente de Gini)</li>
+                            <li>Monitorar taxas de desemprego e inflação</li>
+                            <li>Comparar indicadores entre países e regiões</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Medidas de Assimetria e Curtose</h2>
+
+                    <p className="mb-4 text-lg">
+                        Além das medidas básicas, existem medidas que descrevem a forma da distribuição:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Assimetria (Skewness)</h3>
+                        <p>Mede o grau de simetria da distribuição:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Assimetria positiva</strong>: Cauda alongada para a direita (média &gt; mediana &gt; moda)</li>
+                            <li><strong className="text-white">Assimetria negativa</strong>: Cauda alongada para a esquerda (média &lt; mediana &lt; moda)</li>
+                            <li><strong className="text-white">Distribuição simétrica</strong>: Média = Mediana = Moda</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Curtose</h3>
+                        <p>Mede o achatamento da distribuição:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Leptocúrtica</strong>: Distribuição mais afilada que a normal</li>
+                            <li><strong className="text-white">Platicúrtica</strong>: Distribuição mais achatada que a normal</li>
+                            <li><strong className="text-white">Mesocúrtica</strong>: Distribuição com curtose similar à normal</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Quartis, Decis e Percentis</h2>
+
+                    <p className="mb-4 text-lg">
+                        Estas medidas dividem os dados ordenados em partes iguais:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Quartis</h3>
+                        <p>Dividem os dados em 4 partes iguais:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Q1 (Primeiro quartil)</strong>: 25% dos dados estão abaixo deste valor</li>
+                            <li><strong className="text-white">Q2 (Segundo quartil)</strong>: 50% dos dados estão abaixo (mediana)</li>
+                            <li><strong className="text-white">Q3 (Terceiro quartil)</strong>: 75% dos dados estão abaixo deste valor</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Decis</h3>
+                        <p>Dividem os dados em 10 partes iguais (D1, D2, ..., D9)</p>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Percentis</h3>
+                        <p>Dividem os dados em 100 partes iguais (P1, P2, ..., P99)</p>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo Prático</h3>
+                        <p>Para o conjunto ordenado: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Q1 = 13.75 (média entre 10 e 15)</li>
+                            <li>Q2 = 27.5 (média entre 25 e 30)</li>
+                            <li>Q3 = 41.25 (média entre 40 e 45)</li>
+                            <li>Amplitude interquartil (Q3-Q1) = 27.5</li>
+                        </ul>
+                    </div>
 
                     <h2 className="text-3xl font-bold text-white mt-8 mb-4">Conclusão</h2>
 

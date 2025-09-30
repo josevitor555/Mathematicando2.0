@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faGlobe, faHashtag, faLink } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { InlineMath, BlockMath } from 'react-katex';
+import { ArrowLeft, Globe, Twitter, Linkedin, Github } from 'lucide-react';
 
 // Dados do autor (exemplo)
 const authorData = {
@@ -33,7 +34,7 @@ const Activity02 = () => {
                 onClick={handleGoBack}
                 className="mb-4 flex items-center text-white hover:text-gray-300 transition-colors"
             >
-                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
+                <ArrowLeft className="mr-2 w-5 h-5" />
                 <span>Voltar</span>
             </button>
 
@@ -73,16 +74,16 @@ const Activity02 = () => {
                             {/* Links sociais */}
                             <div className="flex justify-center md:justify-start space-x-4 mb-3">
                                 <a href={authorData.socialLinks.website} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
+                                    <Globe className="w-5 h-5" />
                                 </a>
                                 <a href={`https://twitter.com/${authorData.socialLinks.twitter}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faHashtag} className="w-5 h-5" />
+                                    <Twitter className="w-5 h-5" />
                                 </a>
                                 <a href={`https://linkedin.com/in/${authorData.socialLinks.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                                 <a href={`https://github.com/${authorData.socialLinks.github}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Github className="w-5 h-5" />
                                 </a>
                             </div>
 
@@ -114,7 +115,7 @@ const Activity02 = () => {
                     <p className="text-lg text-gray-100 mb-6 leading-relaxed">
                         A Geometria Espacial é o ramo da matemática que estuda as figuras e formas no espaço tridimensional.
                         Diferente da Geometria Plana, que trabalha com figuras bidimensionais, a Geometria Espacial lida com
-                        objetos que possuem comprimento, largura e altura. Este campo da matemática é fundamental para diversas
+                        objetos que possem comprimento, largura e altura. Este campo da matemática é fundamental para diversas
                         áreas como arquitetura, engenharia, design e até mesmo na compreensão do universo ao nosso redor.
                     </p>
 
@@ -233,6 +234,205 @@ const Activity02 = () => {
                             Comece com formas simples como cubos e cilindros antes de avançar para formas mais complexas.
                         </p>
                     </div>
+
+                    <h2 className="text-2xl font-bold text-white mb-4 mt-8">Exemplos Interativos</h2>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        Vamos explorar alguns exemplos interativos para entender melhor os conceitos de geometria espacial:
+                    </p>
+
+                    <div className="bg-gray-200/10 p-4 rounded-xl my-4">
+                        <h3 className="text-xl font-bold text-white mb-2">Exemplo 1: Aplicação da Fórmula de Euler</h3>
+                        <p className="text-gray-100 mb-3">
+                            Verificar a fórmula de Euler para um cubo:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Um cubo tem 8 vértices, 12 arestas e 6 faces</li>
+                            <li>Aplicando a fórmula: V - A + F = 8 - 12 + 6 = 2 ✓</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Exemplo 2: Cálculo de Volume e Área</h3>
+                        <p className="text-gray-100 mb-3">
+                            Calcular o volume e área de um cilindro com raio 5 cm e altura 10 cm:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Volume = πr²h = π × 25 × 10 = 250π cm³ ≈ 785.4 cm³</li>
+                            <li>Área = 2πr(h + r) = 2π × 5(10 + 5) = 150π cm² ≈ 471.2 cm²</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-white mb-4 mt-8">Exercícios Práticos</h2>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 p-4 rounded-xl my-4">
+                        <h3 className="text-xl font-bold text-white mb-2">Exercício 1</h3>
+                        <p className="text-gray-100 mb-3">
+                            Uma pirâmide quadrangular regular tem aresta da base medindo 6 cm e altura 8 cm. Calcule seu volume.
+                        </p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p className="text-gray-100">
+                                    Solução:
+                                </p>
+                                <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                                    <li>Área da base = 6² = 36 cm²</li>
+                                    <li>Volume = (1/3) × Área da base × altura = (1/3) × 36 × 8 = 96 cm³</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Exercício 2</h3>
+                        <p className="text-gray-100 mb-3">
+                            Uma esfera tem volume de 36π cm³. Qual é o seu raio e área superficial?
+                        </p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p className="text-gray-100">
+                                    Solução:
+                                </p>
+                                <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                                    <li>Volume = (4/3)πr³ = 36π</li>
+                                    <li>(4/3)r³ = 36</li>
+                                    <li>r³ = 27</li>
+                                    <li>r = 3 cm</li>
+                                    <li>Área = 4πr² = 4π × 9 = 36π cm²</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-white mb-4 mt-8">Aplicações em Computação Gráfica 3D</h2>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        A geometria espacial é fundamental em computação gráfica para diversos propósitos:
+                    </p>
+
+                    <div className="bg-gray-200/10 p-4 rounded-xl my-4">
+                        <h3 className="text-xl font-bold text-white mb-2">Modelagem 3D</h3>
+                        <p className="text-gray-100 mb-3">
+                            Objetos tridimensionais são representados por malhas poligonais:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Modelagem de personagens e cenários em jogos 3D</li>
+                            <li>Animação e rigging de modelos</li>
+                            <li>Design de produtos e prototipagem virtual</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Renderização</h3>
+                        <p className="text-gray-100 mb-3">
+                            Algoritmos geométricos são usados para:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Determinar visibilidade de superfícies (backface culling)</li>
+                            <li>Calcular interseções entre raios e objetos</li>
+                            <li>Realizar operações booleanas em sólidos</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Transformações 3D</h3>
+                        <p className="text-gray-100 mb-3">
+                            Matrizes 4x4 são usadas para transformações geométricas:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Translação, rotação e escala em 3D</li>
+                            <li>Transformações de câmera e projeção</li>
+                            <li>Transformações hierárquicas em animações</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-white mb-4 mt-8">Geometria Analítica Espacial</h2>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        Combina álgebra e geometria para estudar figuras tridimensionais:
+                    </p>
+
+                    <div className="bg-gray-200/10 p-4 rounded-xl my-4">
+                        <h3 className="text-xl font-bold text-white mb-2">Sistema de Coordenadas Cartesianas 3D</h3>
+                        <p className="text-gray-100 mb-3">
+                            Representação de pontos no espaço tridimensional:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Ponto P(x, y, z) onde x, y e z são as coordenadas</li>
+                            <li>Distância entre dois pontos: d = √[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]</li>
+                            <li>Ponto médio: M = [(x₁+x₂)/2, (y₁+y₂)/2, (z₁+z₂)/2]</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Equações de Planos e Retas</h3>
+                        <p className="text-gray-100 mb-3">
+                            Formas de representar planos e retas no espaço:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Equação geral do plano: ax + by + cz + d = 0</li>
+                            <li>Equação vetorial da reta: P = P₀ + t·v</li>
+                            <li>Equações paramétricas da reta: x = x₀ + at, y = y₀ + bt, z = z₀ + ct</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Superfícies Quádricas</h3>
+                        <p className="text-gray-100 mb-3">
+                            Superfícies definidas por equações de segundo grau:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Elipsóide: x²/a² + y²/b² + z²/c² = 1</li>
+                            <li>Hiperbolóide: x²/a² + y²/b² - z²/c² = 1</li>
+                            <li>Paraboloide: z = x²/a² + y²/b²</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-white mb-4 mt-8">Transformações Geométricas 3D</h2>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        Operações que modificam a posição, orientação ou tamanho de figuras tridimensionais:
+                    </p>
+
+                    <div className="bg-gray-200/10 p-4 rounded-xl my-4">
+                        <h3 className="text-xl font-bold text-white mb-2">Transformações Rígidas</h3>
+                        <p className="text-gray-100 mb-3">
+                            Preservam distâncias e ângulos:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li><strong className="text-white">Translação 3D</strong>: Deslocamento em x, y e z</li>
+                            <li><strong className="text-white">Rotação 3D</strong>: Giro em torno dos eixos x, y ou z</li>
+                            <li><strong className="text-white">Reflexão 3D</strong>: Espelhamento em relação a um plano</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Transformações Não-Rígidas</h3>
+                        <p className="text-gray-100 mb-3">
+                            Alteram o tamanho ou forma da figura:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li><strong className="text-white">Escala 3D</strong>: Ampliação ou redução proporcional nos três eixos</li>
+                            <li><strong className="text-white">Cisalhamento 3D</strong>: Deformação que preserva volumes</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mb-2 mt-4">Composição de Transformações</h3>
+                        <p className="text-gray-100 mb-3">
+                            Aplicação sequencial de transformações:
+                        </p>
+                        <ul className="list-disc pl-8 text-gray-100 space-y-1">
+                            <li>Ordem das transformações afeta o resultado final</li>
+                            <li>Representação matricial 4x4 para facilitar cálculos</li>
+                            <li>Aplicações em animações e modelagem 3D</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-white mb-4 mt-8">Conclusão</h2>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        A Geometria Espacial é uma área fundamental da matemática com aplicações em praticamente todos
+                        os campos do conhecimento. Dominar seus conceitos é essencial para compreender fenômenos
+                        tridimensionais e resolver problemas práticos. As aplicações modernas da geometria espacial vão desde
+                        a computação gráfica 3D até a navegação espacial, demonstrando sua relevância contínua.
+                    </p>
+
+                    <p className="text-lg text-gray-100 mb-4 leading-relaxed">
+                        Com o avanço da tecnologia, especialmente em áreas como realidade virtual e aumentada, a geometria espacial
+                        torna-se cada vez mais importante para profissionais de diversas áreas, desde designers e engenheiros
+                        até desenvolvedores de jogos e cientistas de dados.
+                    </p>
                 </motion.div>
             </div>
         </div>

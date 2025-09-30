@@ -289,6 +289,173 @@ const Activity02 = () => {
                         </li>
                     </ol>
 
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exemplos Interativos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Vamos explorar alguns exemplos interativos para entender melhor como as funções quadráticas se comportam:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 1: Função com Concavidade para Baixo</h3>
+                        <p>Considere f(x) = -2x² + 4x + 1</p>
+                        <BlockMath math="f(x) = -2x^2 + 4x + 1" />
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Coeficiente a = -2 (negativo, concavidade para baixo)</li>
+                            <li>Coeficiente b = 4</li>
+                            <li>Coeficiente c = 1</li>
+                            <li>Vértice: x<sub>v</sub> = -4/(2×(-2)) = 1; y<sub>v</sub> = f(1) = -2 + 4 + 1 = 3</li>
+                            <li>Vértice: (1, 3) - ponto de máximo</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 2: Função com Discriminante Zero</h3>
+                        <p>Considere g(x) = x² - 4x + 4</p>
+                        <BlockMath math="g(x) = x^2 - 4x + 4" />
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Coeficiente a = 1 (positivo, concavidade para cima)</li>
+                            <li>Coeficiente b = -4</li>
+                            <li>Coeficiente c = 4</li>
+                            <li>Discriminante: Δ = (-4)² - 4(1)(4) = 16 - 16 = 0</li>
+                            <li>Raiz dupla: x = 4/2 = 2</li>
+                            <li>Vértice: (2, 0) - toca o eixo x em um único ponto</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exercícios Práticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 1</h3>
+                        <p>Determine o vértice e as raízes da função f(x) = 2x² - 8x + 6. Classifique a concavidade.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Coeficientes: a = 2, b = -8, c = 6</li>
+                                    <li>Concavidade: para cima (a = 2 <InlineMath math=" > 0" />)</li>
+                                    <li>Vértice: x<sub>v</sub> = -(-8)/(2×2) = 8/4 = 2</li>
+                                    <li>y<sub>v</sub> = f(2) = 2(4) - 8(2) + 6 = 8 - 16 + 6 = -2</li>
+                                    <li>Vértice: (2, -2)</li>
+                                    <li>Discriminante: Δ = (-8)² - 4(2)(6) = 64 - 48 = 16</li>
+                                    <li>Raízes: x = (8 ± √16)/4 = (8 ± 4)/4</li>
+                                    <li>x<sub>1</sub> = 1 e x<sub>2</sub> = 3</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 2</h3>
+                        <p>Uma empresa determinou que seu lucro L(x) em função da quantidade x de produtos vendidos é dado por L(x) = -x² + 100x - 1600. Determine a quantidade de produtos que maximiza o lucro e qual é esse lucro máximo.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Função: L(x) = -x² + 100x - 1600</li>
+                                    <li>Coeficientes: a = -1, b = 100, c = -1600</li>
+                                    <li>Concavidade: para baixo (a = -1 <InlineMath math=" < 0" />) - ponto de máximo</li>
+                                    <li>Quantidade que maximiza: x<sub>v</sub> = -100/(2×(-1)) = 50 produtos</li>
+                                    <li>Lucro máximo: L(50) = -(50)² + 100(50) - 1600 = -2500 + 5000 - 1600 = 900</li>
+                                    <li>Lucro máximo: R$ 900,00 com 50 produtos vendidos</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações em Economia</h2>
+
+                    <p className="mb-4 text-lg">
+                        As funções quadráticas têm ampla aplicação em modelos econômicos:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Custo, Receita e Lucro</h3>
+                        <p>Em microeconomia, funções quadráticas modelam relações não lineares:</p>
+                        <BlockMath math="\text{Custo: } C(x) = ax^2 + bx + c" />
+                        <BlockMath math="\text{Receita: } R(x) = px - qx^2" />
+                        <BlockMath math="\text{Lucro: } L(x) = R(x) - C(x)" />
+                        <p>Onde:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>x é a quantidade produzida/vendida</li>
+                            <li>a, b, c, p, q são constantes positivas</li>
+                            <li>O custo pode aumentar quadraticamente com a produção (dificuldades logísticas)</li>
+                            <li>A receita pode ter um termo quadrático negativo (diminuição do preço com maior oferta)</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Maximização de Lucro</h3>
+                        <p>O lucro máximo ocorre no vértice da parábola do lucro:</p>
+                        <BlockMath math="L(x) = (p - b)x - (q + a)x^2 - c" />
+                        <BlockMath math="x_{max} = \frac{p - b}{2(q + a)}" />
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Funções Quadráticas com Parâmetros</h2>
+
+                    <p className="mb-4 text-lg">
+                        Estudar como os coeficientes afetam o gráfico da função quadrática:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Variação do Coeficiente "a"</h3>
+                        <p>Na função f(x) = ax²:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Quanto maior |a|, mais "fechada" é a parábola</li>
+                            <li>Quanto menor |a|, mais "aberta" é a parábola</li>
+                            <li>Sinal de a determina a concavidade</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Variação do Coeficiente "b"</h3>
+                        <p>Na função f(x) = x² + bx:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>O coeficiente b afeta a posição horizontal do vértice</li>
+                            <li>Vértice em x<sub>v</sub> = -b/2</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Variação do Coeficiente "c"</h3>
+                        <p>Na função f(x) = x² + c:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>O coeficiente c representa o deslocamento vertical</li>
+                            <li>É o ponto onde a parábola intersecta o eixo y</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Transformações de Gráficos</h2>
+
+                    <p className="mb-4 text-lg">
+                        A partir da função básica f(x) = x², podemos obter outras parábolas através de transformações:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Translações</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Vertical</strong>: f(x) = x² + k desloca k unidades para cima (k <InlineMath math=" > 0" />) ou para baixo (k <InlineMath math=" < 0" />)</li>
+                            <li><strong className="text-white">Horizontal</strong>: f(x) = (x - h)² desloca h unidades para a direita (h <InlineMath math=" > 0" />) ou para a esquerda (h <InlineMath math=" < 0" />)</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Dilatações e Compressões</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Vertical</strong>: f(x) = ax²</li>
+                            <li>Se |a| <InlineMath math=" > 1" />: dilatação vertical</li>
+                            <li>Se 0 <InlineMath math=" < |a| < 1" />: compressão vertical</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Reflexões</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Em relação ao eixo x</strong>: f(x) = -x²</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo Composto</h3>
+                        <p>A função f(x) = 2(x - 3)² + 1 representa uma parábola:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Deslocada 3 unidades para a direita</li>
+                            <li>Deslocada 1 unidade para cima</li>
+                            <li>Comprimida verticalmente (fator 2)</li>
+                            <li>Com concavidade para cima</li>
+                            <li>Vértice em (3, 1)</li>
+                        </ul>
+                    </div>
+
                     <h2 className="text-3xl font-bold text-white mt-8 mb-4">Conclusão</h2>
 
                     <p className="mb-4 text-lg">

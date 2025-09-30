@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faGlobe, faHashtag, faLink } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { InlineMath, BlockMath } from 'react-katex';
+import { ArrowLeft, Globe, Twitter, Linkedin, Github } from 'lucide-react';
 
 // Dados do autor (exemplo)
 const authorData = {
@@ -33,7 +34,7 @@ const Activity01 = () => {
                 onClick={handleGoBack}
                 className="mb-4 flex items-center text-white hover:text-gray-300 transition-colors"
             >
-                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
+                <ArrowLeft className="mr-2 w-5 h-5" />
                 <span>Voltar</span>
             </button>
 
@@ -73,16 +74,16 @@ const Activity01 = () => {
                             {/* Links sociais */}
                             <div className="flex justify-center md:justify-start space-x-4 mb-3">
                                 <a href={authorData.socialLinks.website} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
+                                    <Globe className="w-5 h-5" />
                                 </a>
                                 <a href={`https://twitter.com/${authorData.socialLinks.twitter}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faHashtag} className="w-5 h-5" />
+                                    <Twitter className="w-5 h-5" />
                                 </a>
                                 <a href={`https://linkedin.com/in/${authorData.socialLinks.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                                 <a href={`https://github.com/${authorData.socialLinks.github}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Github className="w-5 h-5" />
                                 </a>
                             </div>
 
@@ -345,12 +346,170 @@ const Activity01 = () => {
                         <li><strong className="text-white">Design</strong>: Criação de layouts e interfaces</li>
                     </ul>
 
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exemplos Interativos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Vamos explorar alguns exemplos interativos para entender melhor os conceitos de geometria plana:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 1: Aplicação do Teorema de Pitágoras</h3>
+                        <p>Uma escada de 5 metros está encostada em uma parede, com sua base a 3 metros da parede. Qual a altura que a escada alcança na parede?</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Usando o teorema de Pitágoras: h² + 3² = 5²</li>
+                            <li>h² + 9 = 25</li>
+                            <li>h² = 16</li>
+                            <li>h = 4 metros</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 2: Cálculo de Área de Polígonos</h3>
+                        <p>Calcular a área de um hexágono regular com lado de 6 cm:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Área = (3√3/2) × l²</li>
+                            <li>Área = (3√3/2) × 36 = 54√3 cm²</li>
+                            <li>Área ≈ 93.53 cm²</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exercícios Práticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 1</h3>
+                        <p>Um triângulo retângulo tem catetos medindo 8 cm e 15 cm. Calcule a hipotenusa e a área do triângulo.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Hipotenusa: h² = 8² + 15² = 64 + 225 = 289</li>
+                                    <li>h = √289 = 17 cm</li>
+                                    <li>Área: (8 × 15)/2 = 60 cm²</li>
+                                </ul>
+                            </div>
+                        </details>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 2</h3>
+                        <p>Um círculo tem área de 78.5 cm². Qual é o seu raio e perímetro? (Use π = 3.14)</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Área = πr² → 78.5 = 3.14 × r²</li>
+                                    <li>r² = 78.5/3.14 = 25</li>
+                                    <li>r = 5 cm</li>
+                                    <li>Perímetro = 2πr = 2 × 3.14 × 5 = 31.4 cm</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações em Computação Gráfica</h2>
+
+                    <p className="mb-4 text-lg">
+                        A geometria plana é fundamental em computação gráfica para diversos propósitos:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Representação de Objetos</h3>
+                        <p>Objetos 2D são representados por polígonos:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Modelagem de personagens e cenários em jogos 2D</li>
+                            <li>Interface gráfica de usuários (GUI)</li>
+                            <li>Design de ícones e logotipos</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Algoritmos de Renderização</h3>
+                        <p>Algoritmos geométricos são usados para:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Determinar se um ponto está dentro de um polígono</li>
+                            <li>Calcular interseções entre linhas e formas</li>
+                            <li>Realizar operações booleanas (união, interseção, diferença)</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Transformações 2D</h3>
+                        <p>Matrizes são usadas para transformações geométricas:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Translação, rotação e escala</li>
+                            <li>Transformações afins preservam linhas paralelas</li>
+                            <li>Projeções ortográficas e perspectivas</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Geometria Analítica</h2>
+
+                    <p className="mb-4 text-lg">
+                        Combina álgebra e geometria para estudar figuras geométricas:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Sistema de Coordenadas Cartesianas</h3>
+                        <p>Representação de pontos no plano:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Ponto P(x, y) onde x é a abscissa e y é a ordenada</li>
+                            <li>Distância entre dois pontos: d = √[(x₂-x₁)² + (y₂-y₁)²]</li>
+                            <li>Ponto médio: M = [(x₁+x₂)/2, (y₁+y₂)/2]</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Equações de Retas</h3>
+                        <p>Formas de representar retas no plano:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Forma reduzida: y = mx + b (m = coeficiente angular, b = coeficiente linear)</li>
+                            <li>Forma geral: ax + by + c = 0</li>
+                            <li>Forma segmentária: x/a + y/b = 1</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Equações de Circunferências</h3>
+                        <p>Representação de circunferências:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Centro na origem: x² + y² = r²</li>
+                            <li>Centro em (a, b): (x-a)² + (y-b)² = r²</li>
+                            <li>Forma geral: x² + y² + Dx + Ey + F = 0</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Transformações Geométricas</h2>
+
+                    <p className="mb-4 text-lg">
+                        Operações que modificam a posição, orientação ou tamanho de figuras:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Transformações Rígidas</h3>
+                        <p>Preservam distâncias e ângulos:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Translação</strong>: Deslocamento de uma figura sem rotação</li>
+                            <li><strong className="text-white">Rotação</strong>: Giro de uma figura em torno de um ponto</li>
+                            <li><strong className="text-white">Reflexão</strong>: Espelhamento em relação a uma reta</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Transformações Não-Rígidas</h3>
+                        <p>Alteram o tamanho ou forma da figura:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li><strong className="text-white">Homotetia/Escala</strong>: Ampliação ou redução proporcional</li>
+                            <li><strong className="text-white">Cisalhamento</strong>: Deformação que preserva áreas</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Composição de Transformações</h3>
+                        <p>Aplicação sequencial de transformações:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Ordem das transformações afeta o resultado final</li>
+                            <li>Representação matricial para facilitar cálculos</li>
+                            <li>Aplicações em animações e modelagem 3D</li>
+                        </ul>
+                    </div>
+
                     <h2 className="text-3xl font-bold text-white mt-8 mb-4">Conclusão</h2>
 
                     <p className="mb-4 text-lg">
                         A geometria plana é uma área fundamental da matemática com aplicações em praticamente todos
                         os campos do conhecimento. Dominar seus conceitos é essencial para compreender fenômenos
-                        geométricos e resolver problemas práticos.
+                        geométricos e resolver problemas práticos. As aplicações modernas da geometria plana vão desde
+                        a computação gráfica até a navegação por satélite, demonstrando sua relevância contínua.
                     </p>
 
                     <p className="text-lg">

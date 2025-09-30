@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faGlobe, faHashtag, faLink } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { InlineMath, BlockMath } from 'react-katex';
+import { ArrowLeft, Globe, Twitter, Linkedin, Github } from 'lucide-react';
 
 // Dados do autor (exemplo)
 const authorData = {
@@ -33,7 +34,7 @@ const Activity02 = () => {
                 onClick={handleGoBack}
                 className="mb-4 flex items-center text-white hover:text-gray-300 transition-colors"
             >
-                <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
+                <ArrowLeft className="mr-2 w-5 h-5" />
                 <span>Voltar</span>
             </button>
 
@@ -73,16 +74,16 @@ const Activity02 = () => {
                             {/* Links sociais */}
                             <div className="flex justify-center md:justify-start space-x-4 mb-3">
                                 <a href={authorData.socialLinks.website} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faGlobe} className="w-5 h-5" />
+                                    <Globe className="w-5 h-5" />
                                 </a>
                                 <a href={`https://twitter.com/${authorData.socialLinks.twitter}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faHashtag} className="w-5 h-5" />
+                                    <Twitter className="w-5 h-5" />
                                 </a>
                                 <a href={`https://linkedin.com/in/${authorData.socialLinks.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                                 <a href={`https://github.com/${authorData.socialLinks.github}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                                    <FontAwesomeIcon icon={faLink} className="w-5 h-5" />
+                                    <Github className="w-5 h-5" />
                                 </a>
                             </div>
 
@@ -332,6 +333,171 @@ const Activity02 = () => {
                         A probabilidade é uma ferramenta matemática poderosa para lidar com a incerteza.
                         Compreender seus conceitos fundamentais é essencial para tomar decisões informadas
                         em um mundo cheio de variáveis imprevisíveis.
+                    </p>
+
+                    <p className="text-lg">
+                        No próximo artigo, exploraremos técnicas avançadas de inferência estatística.
+                    </p>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exemplos Interativos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Vamos explorar alguns exemplos interativos para entender melhor os conceitos de probabilidade:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 1: Lançamento de Dados</h3>
+                        <p>No lançamento de dois dados, qual a probabilidade de obter soma 7?</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Espaço amostral: 36 resultados possíveis (6 × 6)</li>
+                            <li>Resultados favoráveis: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 resultados</li>
+                            <li>Probabilidade: P(soma 7) = 6/36 = 1/6 ≈ 0.1667 ou 16.67%</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 2: Probabilidade Condicional</h3>
+                        <p>Em uma turma de 30 alunos, 18 são mulheres e 12 são homens. Entre as mulheres, 12 estudam inglês. Entre os homens, 8 estudam inglês. Se escolhemos um aluno aleatoriamente e ele estuda inglês, qual a probabilidade de ser mulher?</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Total que estuda inglês: 12 + 8 = 20 alunos</li>
+                            <li>Mulheres que estudam inglês: 12</li>
+                            <li>P(mulher | estuda inglês) = 12/20 = 0.6 ou 60%</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exercícios Práticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 1</h3>
+                        <p>Uma urna contém 5 bolas vermelhas, 3 azuis e 2 verdes. Retirando uma bola ao acaso, qual a probabilidade de ser vermelha ou azul?</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Total de bolas: 5 + 3 + 2 = 10</li>
+                                    <li>Bolas vermelhas ou azuis: 5 + 3 = 8</li>
+                                    <li>Probabilidade: P(vermelha ou azul) = 8/10 = 0.8 ou 80%</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 2</h3>
+                        <p>Dois eventos A e B têm probabilidades P(A) = 0.6, P(B) = 0.4 e P(A ∩ B) = 0.2. Calcule P(A ∪ B) e determine se A e B são independentes.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.6 + 0.4 - 0.2 = 0.8</li>
+                                    <li>Para independência: P(A ∩ B) = P(A) × P(B)</li>
+                                    <li>P(A) × P(B) = 0.6 × 0.4 = 0.24</li>
+                                    <li>Como 0.2 ≠ 0.24, os eventos A e B não são independentes</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações em Ciência de Dados</h2>
+
+                    <p className="mb-4 text-lg">
+                        A probabilidade é fundamental em ciência de dados para diversos propósitos:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Classificação</h3>
+                        <p>Algoritmos de classificação como Naive Bayes utilizam probabilidade:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Calculam P(classe | características) para cada classe possível</li>
+                            <li>Atribuem o objeto à classe com maior probabilidade</li>
+                            <li>Assumem independência entre características (daí "Naive")</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Aprendizado de Máquina</h3>
+                        <p>Muitos algoritmos de machine learning são baseados em modelos probabilísticos:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Redes Bayesianas para representar dependências entre variáveis</li>
+                            <li>Modelos de Mistura para agrupamento (clustering)</li>
+                            <li>Processos Gaussianos para regressão</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Avaliação de Modelos</h3>
+                        <p>Métricas de avaliação utilizam conceitos probabilísticos:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Curva ROC e AUC (Area Under Curve)</li>
+                            <li>Entropia e informação mútua</li>
+                            <li>Intervalos de confiança para métricas</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Processos Estocásticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Sequências de eventos aleatórios que evoluem ao longo do tempo:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Cadeias de Markov</h3>
+                        <p>Processos onde o futuro depende apenas do estado atual:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Matriz de transição define probabilidades entre estados</li>
+                            <li>Aplicações: previsão do tempo, análise de texto, PageRank do Google</li>
+                            <li>Propriedade markoviana: P(Xₙ₊₁ | X₀, X₁, ..., Xₙ) = P(Xₙ₊₁ | Xₙ)</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Processo de Poisson</h3>
+                        <p>Modela eventos raros que ocorrem aleatoriamente no tempo:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Número de chamadas em uma central telefônica</li>
+                            <li>Chegada de clientes em uma fila</li>
+                            <li>Falhas em equipamentos</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Movimento Browniano</h3>
+                        <p>Modela o movimento aleatório de partículas suspensas em fluido:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Base para modelagem de preços de ações em finanças</li>
+                            <li>Processo gaussiano com incrementos independentes</li>
+                            <li>Aplicações em física, biologia e economia</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Teorema do Limite Central</h2>
+
+                    <p className="mb-4 text-lg">
+                        Um dos teoremas mais importantes da probabilidade e estatística:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Enunciado</h3>
+                        <p>A soma de um grande número de variáveis aleatórias independentes e identicamente distribuídas tende a seguir uma distribuição normal, independentemente da distribuição original das variáveis.</p>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Implicações</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Justifica o uso da distribuição normal em muitas situações</li>
+                            <li>Base para muitos testes estatísticos</li>
+                            <li>Explica por que a distribuição normal aparece frequentemente na natureza</li>
+                        </ul>
+
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo Prático</h3>
+                        <p>Lançando um dado 100 vezes e somando os resultados:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Cada lançamento segue uma distribuição uniforme discreta</li>
+                            <li>A soma dos 100 lançamentos segue aproximadamente uma distribuição normal</li>
+                            <li>Média da soma: 100 × 3.5 = 350</li>
+                            <li>Variância da soma: 100 × (35/12) ≈ 291.67</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Conclusão Final</h2>
+
+                    <p className="mb-4 text-lg">
+                        A probabilidade é uma ferramenta matemática poderosa para lidar com a incerteza.
+                        Compreender seus conceitos fundamentais é essencial para tomar decisões informadas
+                        em um mundo cheio de variáveis imprevisíveis. As aplicações da probabilidade são vastas
+                        e abrangem desde ciência de dados até física e finanças.
                     </p>
 
                     <p className="text-lg">

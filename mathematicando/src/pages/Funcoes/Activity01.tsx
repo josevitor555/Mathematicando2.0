@@ -260,6 +260,140 @@ const Activity01 = () => {
                         </li>
                     </ul>
 
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exemplos Interativos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Vamos explorar alguns exemplos interativos para entender melhor como as funções afins se comportam:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 1: Função Crescente</h3>
+                        <p>Considere f(x) = 2x + 1</p>
+                        <BlockMath math="f(x) = 2x + 1" />
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Coeficiente angular: a = 2 (positivo, função crescente)</li>
+                            <li>Coeficiente linear: b = 1</li>
+                            <li>Zero da função: x = -1/2</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo 2: Função Decrescente</h3>
+                        <p>Considere g(x) = -3x + 6</p>
+                        <BlockMath math="g(x) = -3x + 6" />
+                        <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
+                            <li>Coeficiente angular: a = -3 (negativo, função decrescente)</li>
+                            <li>Coeficiente linear: b = 6</li>
+                            <li>Zero da função: x = 2</li>
+                        </ul>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Exercícios Práticos</h2>
+
+                    <p className="mb-4 text-lg">
+                        Tente resolver os seguintes exercícios para fixar o aprendizado:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 1</h3>
+                        <p>Determine o zero da função f(x) = 5x - 10 e classifique-a como crescente ou decrescente.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Coeficiente angular: a = 5 (positivo, função crescente)</li>
+                                    <li>Para encontrar o zero: 5x - 10 = 0 → 5x = 10 → x = 2</li>
+                                    <li>Zero da função: x = 2</li>
+                                </ul>
+                            </div>
+                        </details>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exercício 2</h3>
+                        <p>Um vendedor recebe um salário fixo de R$ 1.200,00 mais comissão de R$ 50,00 por produto vendido. Escreva a função que representa seu salário total em função do número de produtos vendidos e determine quantos produtos ele precisa vender para receber R$ 2.000,00.</p>
+                        <details className="mt-2">
+                            <summary className="cursor-pointer text-blue-300 hover:text-blue-200">Ver solução</summary>
+                            <div className="mt-2 p-2 bg-gray-200/10 rounded">
+                                <p>Solução:</p>
+                                <ul className="list-disc list-inside ml-4 space-y-1">
+                                    <li>Função salário: S(x) = 50x + 1200</li>
+                                    <li>Para S(x) = 2000: 50x + 1200 = 2000</li>
+                                    <li>50x = 800 → x = 16</li>
+                                    <li>Ele precisa vender 16 produtos para receber R$ 2.000,00</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Aplicações em Economia</h2>
+
+                    <p className="mb-4 text-lg">
+                        As funções afins têm ampla aplicação em modelos econômicos:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Oferta e Demanda</h3>
+                        <p>Em microeconomia, as curvas de oferta e demanda são frequentemente modeladas como funções afins:</p>
+                        <BlockMath math="\text{Demanda: } D(p) = a - bp" />
+                        <BlockMath math="\text{Oferta: } S(p) = c + dp" />
+                        <p>Onde:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>p é o preço do produto</li>
+                            <li>a, b, c, d são constantes positivas</li>
+                            <li>Na curva de demanda, a quantidade demandada diminui conforme o preço aumenta (b &gt; 0)</li>
+                            <li>Na curva de oferta, a quantidade ofertada aumenta conforme o preço aumenta (d &gt; 0)</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Ponto de Equilíbrio</h3>
+                        <p>O ponto de equilíbrio ocorre quando oferta e demanda se igualam:</p>
+                        <BlockMath math="D(p) = S(p)" />
+                        <BlockMath math="a - bp = c + dp" />
+                        <BlockMath math="p = \frac{a - c}{b + d}" />
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Composição de Funções Afins</h2>
+
+                    <p className="mb-4 text-lg">
+                        A composição de duas funções afins resulta em outra função afim:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <p>Sejam f(x) = ax + b e g(x) = cx + d, então:</p>
+                        <BlockMath math="(f \circ g)(x) = f(g(x)) = f(cx + d) = a(cx + d) + b = acx + ad + b" />
+                        <p>Que também é uma função afim com:</p>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Coeficiente angular: ac</li>
+                            <li>Coeficiente linear: ad + b</li>
+                        </ul>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Exemplo</h3>
+                        <p>Se f(x) = 2x + 3 e g(x) = x - 1, então:</p>
+                        <BlockMath math="(f \circ g)(x) = f(g(x)) = f(x - 1) = 2(x - 1) + 3 = 2x - 2 + 3 = 2x + 1" />
+                    </div>
+
+                    <h2 className="text-3xl font-bold text-white mt-8 mb-4">Funções Afins por Partes</h2>
+
+                    <p className="mb-4 text-lg">
+                        Algumas situações exigem funções definidas por partes diferentes:
+                    </p>
+
+                    <div className="bg-gray-200/10 rounded-lg text-gray-200 p-4 overflow-x-auto mb-4 text-lg">
+                        <p>Por exemplo, uma empresa pode cobrar tarifas diferentes dependendo do consumo:</p>
+                        <BlockMath math="
+                        f(x) = 
+                        \begin{cases}
+                          10x & \text{se } 0 \leq x \leq 100 \\
+                          8x + 200 & \text{se } x > 100
+                        \end{cases}
+                        " />
+                        <p>Onde x representa o consumo e f(x) o valor a ser pago.</p>
+                        
+                        <h3 className="text-xl font-bold text-white mt-4 mb-2">Análise</h3>
+                        <ul className="list-disc list-inside ml-4 space-y-1">
+                            <li>Para consumos até 100 unidades: custo linear com taxa de 10 por unidade</li>
+                            <li>Para consumos acima de 100 unidades: taxa menor (8) mas com tarifa fixa adicional (200)</li>
+                            <li>Essa estrutura incentiva o consumo moderado mas oferece desconto para grandes consumidores</li>
+                        </ul>
+                    </div>
+
                     <h2 className="text-3xl font-bold text-white mt-8 mb-4">Conclusão</h2>
 
                     <p className="mb-4 text-lg">
