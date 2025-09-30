@@ -9,6 +9,7 @@ interface IArtigo {
         username: string;
         avatarUrl: string;
     };
+    xp: number;
 }
 
 // Interface para representar um módulo principal
@@ -33,7 +34,8 @@ export const modulos: IModulo[] = [
                     nome: 'George Lucas',
                     username: '@georgelucas',
                     avatarUrl: 'https://i.pravatar.cc/150?img=1'
-                }
+                },
+                xp: 50
             },
             {
                 id: 'funcoes-quadraticas',
@@ -44,7 +46,8 @@ export const modulos: IModulo[] = [
                     nome: 'Matheus Oliveira',
                     username: '@matheusoliveira',
                     avatarUrl: 'https://i.pravatar.cc/150?img=2'
-                }
+                },
+                xp: 75
             },
             {
                 id: 'funcoes-exponenciais',
@@ -55,7 +58,8 @@ export const modulos: IModulo[] = [
                     nome: 'Ana Carla',
                     username: '@anacarla',
                     avatarUrl: 'https://i.pravatar.cc/150?img=3'
-                }
+                },
+                xp: 50
             },
         ],
     },
@@ -72,7 +76,8 @@ export const modulos: IModulo[] = [
                     nome: 'Roberto Carlos',
                     username: '@robertocarlos',
                     avatarUrl: 'https://i.pravatar.cc/150?img=4'
-                }
+                },
+                xp: 25
             },
             {
                 id: 'probabilidade',
@@ -83,7 +88,8 @@ export const modulos: IModulo[] = [
                     nome: 'Larissa Santos',
                     username: '@larissasantos',
                     avatarUrl: 'https://i.pravatar.cc/150?img=5'
-                }
+                },
+                xp: 50
             },
         ],
     },
@@ -100,7 +106,8 @@ export const modulos: IModulo[] = [
                     nome: 'Pedro Almeida',
                     username: '@pedroalmeida',
                     avatarUrl: 'https://i.pravatar.cc/150?img=6'
-                }
+                },
+                xp: 25
             },
             {
                 id: 'geometria-espacial',
@@ -111,7 +118,8 @@ export const modulos: IModulo[] = [
                     nome: 'Juliana Martins',
                     username: '@julianamartins',
                     avatarUrl: 'https://i.pravatar.cc/150?img=7'
-                }
+                },
+                xp: 75
             },
         ],
     },

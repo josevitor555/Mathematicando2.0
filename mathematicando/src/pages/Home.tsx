@@ -6,7 +6,7 @@ import { ArticleAuthor } from "@/components/ArticleAuthor";
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHexagon, faAward, faTrophy, faFilter, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faHexagon, faAward, faTrophy, faFilter } from "@fortawesome/free-solid-svg-icons";
 
 // Data Content
 import { modulos } from "@/data/contentMock";
@@ -14,7 +14,43 @@ import { modulos } from "@/data/contentMock";
 // Framer Motion
 import { motion } from "framer-motion";
 
+// React Router
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+    const navigate = useNavigate();
+
+    // Função genérica para lidar com o clique no botão de conferir conteúdo
+    const handleActivityClick = (moduloId: number, artigoId: string) => {
+        // Mapeamento de módulos para rotas
+        const moduleRouteMap: Record<number, string> = {
+            1: 'funcoes',
+            2: 'estatistica',
+            3: 'geometria'
+        };
+
+        // Mapeamento de artigos para atividades
+        const activityRouteMap: Record<string, string> = {
+            'funcoes-afins': 'activity01',
+            'funcoes-quadraticas': 'activity02',
+            'funcoes-exponenciais': 'activity03',
+            'estatistica-descritiva': 'activity01',
+            'probabilidade': 'activity02',
+            'geometria-plana': 'activity01',
+            'geometria-espacial': 'activity02'
+        };
+
+        const moduleRoute = moduleRouteMap[moduloId];
+        const activityRoute = activityRouteMap[artigoId];
+
+        if (moduleRoute && activityRoute) {
+            navigate(`/${moduleRoute}/${activityRoute}`);
+        } else {
+            // Fallback para uma página genérica caso não encontre a rota específica
+            navigate('/'); // ou outra página padrão
+        }
+    };
+
     return (
         <div className="min-h-screen bg-accent-foreground p-4 md:p-6">
             <div className="max-w-6xl mx-auto mb-8">
@@ -47,7 +83,7 @@ const Home = () => {
                             <div className="flex items-center gap-2">
                                 <FontAwesomeIcon icon={faAward} className='w-5 h-5 text-[#fafafa]' />
                                 <span className="font-bold text-[#fafafa]">
-                                    Level 8
+                                    Level 1
                                 </span>
                             </div>
                         </div>
@@ -63,8 +99,8 @@ const Home = () => {
                     className="bg-gray-200/10 rounded-2xl overflow-hidden p-6 mb-8"
                 >
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-macaw-200 rounded-full flex items-center justify-center">
-                            <FontAwesomeIcon icon={faHexagon} className='w-8 h-8 text-[#fafafa]' />
+                        <div className="w-16 h-16 bg-macaw-200 rounded-full flex items-center justify-center">
+                            <FontAwesomeIcon icon={faHexagon} className='text-4xl text-[#fafafa]' />
                         </div>
 
                         <div>
@@ -73,7 +109,7 @@ const Home = () => {
                             </h3>
 
                             <p className="text-[#fafafa]">
-                                Conheça HexAI, seu assistente virtual de matemática!
+                                Avança para o nivel 10 para desbloquear o HexAI!
                             </p>
                         </div>
                     </div>
@@ -123,7 +159,7 @@ const Home = () => {
                                                     <h3 className="text-xl font-bold text-white mb-0">
                                                         {artigo.titulo}
                                                     </h3>
-                                                    <p className="text-lg text-gray-100 mt-2"> {artigo.nivel} </p>
+                                                    <p className="text-lg text-gray-100 mt-2"> Nível {artigo.nivel} </p>
                                                 </div>
 
                                                 <div className="flex items-center justify-center">
@@ -131,7 +167,12 @@ const Home = () => {
                                                 </div>
 
                                                 <div className="flex items-center justify-end">
-                                                    <Button className="cursor-pointer"> Acessar Atividade </Button>
+                                                    <Button 
+                                                        className="cursor-pointer" 
+                                                        onClick={() => handleActivityClick(modulo.id, artigo.id)}
+                                                    >
+                                                        Conferir Conteúdo
+                                                    </Button>
                                                 </div>
 
                                                 {/* Divider */}
@@ -139,11 +180,23 @@ const Home = () => {
                                                     <div className="w-full h-px bg-gray-200/20" />
                                                 </div>
 
-                                                {/* Who wrote the article */}
-                                                <div className="col-span-3 mt-4 flex justify-start">
+                                                <div className="col-span-3 mt-4 flex items-center justify-between">
+
                                                     <ArticleAuthor autor={artigo.autor} />
+
+                                                    {/* Who wrote the article */}
+                                                    {/* <div className="col-span-3 mt-4 flex justify-start">
+                                                        <ArticleAuthor autor={artigo.autor} />
+                                                    </div> */}
+
+                                                    {/* XP Reward */}
+                                                    <div className="bg-gray-200/20 rounded-full px-4 py-2 flex items-center">
+                                                        <span className="text-gray-300 font-bold text-sm">
+                                                            +{artigo.xp} XP
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                                
+
                                             </div>
                                         </motion.div>
                                     ))}
